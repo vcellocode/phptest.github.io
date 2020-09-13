@@ -1,8 +1,12 @@
 <?php
-$to      = 'robertopiodisano@gmail.com';
-$subject = 'the subject';
+
+$name = _REQUEST['name'];
+$subject = REQUEST['subject'];
+$email = _REQUEST['email'];
+
+$to      = 'vcellocode@gmail.com';
 $message = 'hello';
-$headers = 'From: vcellocode@gmail.com' . "\r\n" . phpversion();
+$headers = 'From: ' . $email . "\r\n" . phpversion();
 
 mail($to, $subject, $message, $headers);
 ?>
